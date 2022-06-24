@@ -9,5 +9,5 @@ fn main() {
         .read_line(&mut value)
         .expect("Failed to read line");
     
-    println!("Value: {}", value);
+    println!("Value: {}", value.len());
 }
