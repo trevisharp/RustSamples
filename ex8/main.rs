@@ -11,15 +11,17 @@ fn main() {
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(rect1)
+        rect1.area()
     );
 
     // println!(
     //     "The area of the rectangle is {} square pixels.",
-    //     area(rect1)
+    //     rect1.area()
     // ); error because Rectangle don't implement copy so rect1 is moved at line 14
 }
 
-fn area(rectangle: Rectangle) -> u32 {
-    rectangle.width * rectangle.height
+impl Rectangle {
+    fn area(self) -> u32 {
+        self.width * self.height
+    }
 }
