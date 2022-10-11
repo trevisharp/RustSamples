@@ -17,9 +17,20 @@ impl Addable<i32> for i32 {
     }
 }
 
+impl Addable<f32> for f32 {
+    fn add(&self, other: f32) -> f32 {
+        self + other
+    }
+}
+
 fn main() {
     let p = Point(1, 3);
     let q = Point(2, 2);
     let r = p.sum(q);
-    println!("({}, {})", r.0, r.1)
+    
+    let p1 = Point(3.0, 1.0);
+    let q1 = Point(2.0, 4.0);
+    let r1 = p1.sum(q1);
+    println!("({}, {})", r.0, r.1);
+    println!("({}, {})", r1.0, r1.1)
 }
